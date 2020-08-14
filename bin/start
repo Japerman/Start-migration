@@ -1,0 +1,21 @@
+#!/usr/bin/env php
+<?php
+
+if (!defined('START_VERSION')) {
+    define('START_VERSION', 'dev');
+}
+
+if (is_file(__DIR__ . '/../vendor/autoload.php')) {
+    require_once __DIR__ . '/../vendor/autoload.php';
+} else if (is_file(__DIR__ . '/../../../autoload.php')) {
+    require_once __DIR__ . '/../../../autoload.php';
+} else if (is_file(__DIR__ . '/../autoload.php')) {
+    require_once __DIR__ . '/../autoload.php';
+} else if (is_dir(__DIR__ . '/../src/Start')) {
+    require_once __DIR__ . "/../src/Start/autoload.php.dist";
+} else {
+    require_once "Start/autoload.php.dist";
+}
+
+$app = new Start\Console\StartApplication(START_VERSION);
+$app->run();
