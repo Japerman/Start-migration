@@ -26,7 +26,7 @@ The best way to install start is using composer:
 
 ```bash
 $ curl -sS https://getcomposer.org/installer | php
-$ php composer.phar require davedevelopment/start
+$ php composer.phar require japerman/start-migration
 ```
 
 You can then use the localised version of start for that project
