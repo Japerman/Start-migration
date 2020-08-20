@@ -40,10 +40,14 @@ your project and:
 
 ```bash
 $ start init
-+d ./migrations Place your migration files in here
-+f ./start.php Create services in here
++d ./migrations
++f ./start.php
 $ 
 ```
+
++d ./migrations Place your migration files in here
++f ./start.php Create services in here
+
 
 Note that you can move start.php to config/start.php, the commands will look
 first in the config directory than in the root.
@@ -55,23 +59,23 @@ same name as the file in CamelCase.
 
 ```bash
 $ start generate AddRatingToLolCats
-+f ./migrations/20111018171411_AddRatingToLolCats.php
++f ./migrations/20201018171411_AddRatingToLolCats.php
 $ start status
 
  Status   Migration ID    Migration Name 
 -----------------------------------------
-   down  20111018171929  AddRatingToLolCats
+   down  20201018171929  AddRatingToLolCats
 
 Use the migrate command to run migrations
 
 $ start migrate
- == 20111018171411 AddRatingToLolCats migrating
- == 20111018171411 AddRatingToLolCats migrated 0.0005s
+ == 20201018171411 AddRatingToLolCats migrating
+ == 20201018171411 AddRatingToLolCats migrated 0.0005s
 $ start status
 
  Status   Migration ID    Migration Name 
 -----------------------------------------
-     up  20111018171929  AddRatingToLolCats
+     up  20201018171929  AddRatingToLolCats
 $ 
 ```
 
