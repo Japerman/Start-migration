@@ -46,6 +46,7 @@ $
 ```
 
 +d ./migrations Place your migration files in here
+
 +f ./start.php Create services in here
 
 
