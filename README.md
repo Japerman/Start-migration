@@ -503,39 +503,8 @@ $app = new StartApplication($container, $output);
 $app->up();
 ```
 
-Todo
-----
-
-* Some sort of migration manager, that will take some of the logic out of the
-  commands for calculating which migrations have been run, which need running
-  etc
-* Adapters for Zend\_Db and/or Zend\_Db\_Table and others?
-* Redo and rollback commands
-* Tests!
-* Configuration? 
-* Someway of protecting against class definition clashes with regard to the
-  symfony dependencies and the user supplied bootstrap?
-
-Contributing
-------------
-
-Feel free to fork and send me pull requests, I try and keep the tool really
-basic, if you want to start adding tons of features to start, I'd recommend
-taking a look at [robmorgan/phinx](https://github.com/robmorgan/phinx).
-
-Inspiration
------------
-
-I basically started copying [ActiveRecord::Migrations][activerecordmigrations]
-in terms of the migration features, the bootstrapping was my own idea, the
-layout of the code was inspired by [Symfony][symfony] and [Behat][behat]
-
 Copyright
 ---------
-
-[Pimple][pimple] is copyright Fabien Potencier. Everything I haven't copied from
-anyone else is Copyright (c) 2011 Jose Perez. See LICENCE for further details
-
 
 [pimple]:https://github.com/fabpot/Pimple
 [doctrinemigrations]:https://github.com/doctrine/migrations
